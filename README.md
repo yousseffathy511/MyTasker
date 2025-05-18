@@ -44,6 +44,60 @@ MyTasker helps you organize your daily tasks with a clean, dark-themed interface
    - Open your web browser and navigate to: `http://localhost/mytasker/`
    - Register a new user and start managing your tasks
 
+## 🚀 Running Locally with XAMPP
+
+1. **Install XAMPP**:
+   - Download and install XAMPP from [https://www.apachefriends.org/](https://www.apachefriends.org/)
+   - During installation, select at minimum: Apache, MySQL, PHP, and phpMyAdmin
+
+2. **Start XAMPP Services**:
+   - Launch the XAMPP Control Panel
+   - Start the Apache and MySQL services by clicking the "Start" buttons
+
+3. **Clone or Download MyTasker**:
+   - Clone this repository: `git clone https://github.com/yousseffathy511/MyTasker.git`
+   - Or download as ZIP and extract to your XAMPP htdocs folder: `C:\xampp\htdocs\taskmaker` (Windows) or `/Applications/XAMPP/htdocs/taskmaker` (Mac)
+
+4. **Import Database Schema**:
+   - Open your web browser and navigate to: `http://localhost/phpmyadmin`
+   - Create a new database named `taskmaker`
+   - Select the new database, then click the "Import" tab
+   - Import these SQL files in the following order:
+     1. `database_setup.sql` (creates base tables)
+     2. `notification_tables.sql` (adds notification functionality)
+     3. `security_setup.sql` (adds security enhancements)
+     4. `update_role_column.sql` (updates schema for roles)
+
+5. **Configure Environment**:
+   - Copy `.env.example` to `.env` in the project root
+   - Edit the `.env` file to match your local database settings:
+     ```
+     DB_HOST=localhost
+     DB_NAME=taskmaker
+     DB_USER=root
+     DB_PASS=
+     ```
+     Note: Default XAMPP MySQL user is 'root' with an empty password
+
+6. **Install Dependencies**:
+   - Open a terminal/command prompt
+   - Navigate to the project directory: `cd C:\xampp\htdocs\taskmaker` (adjust path as needed)
+   - Run: `composer install`
+
+7. **Set Permissions**:
+   - Make sure the `backups` and `logs` directories are writable
+   - On Windows, this is usually not an issue
+   - On Linux/Mac: `chmod -R 755 backups/ logs/`
+
+8. **Access Application**:
+   - Open your browser and navigate to: `http://localhost/taskmaker`
+   - Register an account to begin using the application
+
+9. **Default Administrator**:
+   - Username: admin@mytasker.local
+   - Password: Admin@123
+   - Use these credentials to access admin features
+
 ## 🛡️ Security Features
 
 - Strong password hashing with PHP's secure `password_hash()` function
