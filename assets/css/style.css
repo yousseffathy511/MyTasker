@@ -1,0 +1,648 @@
+/* 
+ * Custom Styles for MyTasker Application
+ * Modern, attractive and professional dark mode design
+ */
+
+:root {
+  /* Dark mode color palette */
+  --primary-color: #6154f6;
+  --primary-dark: #4c3ecc;
+  --secondary-color: #323645;
+  --success-color: #00b07a;
+  --danger-color: #e55a5a;
+  --warning-color: #f6c058;
+  --info-color: #50dada;
+  --dark-color: #1d1f2b;
+  --light-color: #f0f2f5;
+  
+  /* Neutral colors */
+  --gray-100: #f0f2f5;
+  --gray-200: #d1d5db;
+  --gray-300: #9ca3af;
+  --gray-400: #6b7280;
+  --gray-500: #4b5563;
+  --gray-600: #374151;
+  --gray-700: #252a37;
+  --gray-800: #1d1f2b;
+  --gray-900: #111219;
+  
+  /* Typography */
+  --body-font: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Background and text colors */
+  --bg-color: var(--gray-900);
+  --bg-card: var(--gray-800);
+  --bg-secondary: var(--gray-700);
+  --text-color: var(--gray-100);
+  --text-muted: var(--gray-300);
+  --border-color: var(--gray-700);
+}
+
+/* Base styles */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  padding-top: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area that pushes footer down */
+.container {
+  flex: 1 0 auto;
+  padding-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 100%);
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  color: var(--gray-300) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--gray-100) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.25rem;
+}
+
+/* Cards styling */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+/* Removing the hover effects as requested */
+.card:hover {
+  transform: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-header .icon-circle {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.card-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Button styling */
+.btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.35rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-secondary {
+  background-color: var(--gray-600);
+  border-color: var(--gray-600);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.btn-outline-secondary {
+  color: var(--gray-300);
+  border-color: var(--gray-600);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--gray-600);
+  color: var(--text-color);
+}
+
+.btn-outline-success {
+  color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-outline-danger {
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-outline-info {
+  color: var(--info-color);
+  border-color: var(--info-color);
+}
+
+.btn-light {
+  background-color: var(--gray-700);
+  color: var(--gray-100);
+  border-color: var(--gray-600);
+}
+
+.btn-light:hover {
+  background-color: var(--gray-600);
+  color: var(--gray-100);
+}
+
+/* Tables styling */
+.table {
+  color: var(--text-color);
+  background-color: var(--bg-card);
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-color: var(--border-color);
+  font-size: 0.9rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 0.35rem;
+  border-color: var(--gray-600);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: none;
+  background-color: var(--gray-700);
+  color: var(--text-color);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(97, 84, 246, 0.25);
+  background-color: var(--gray-700);
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  color: var(--gray-400);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.input-group-text {
+  background-color: var(--gray-600);
+  border-color: var(--gray-600);
+  color: var(--text-muted);
+}
+
+/* Badges styling */
+.badge {
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 0.35rem;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-danger {
+  background-color: var(--danger-color) !important;
+}
+
+.bg-info {
+  background-color: var(--info-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-light {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Task styling */
+.task-item {
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--primary-color);
+  border-color: var(--border-color);
+}
+
+.task-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.task-item.task-complete {
+  border-left-color: var(--success-color);
+  background-color: rgba(0, 176, 122, 0.05);
+}
+
+.task-complete .task-title {
+  text-decoration: line-through;
+  color: var(--gray-400);
+}
+
+/* Custom containers */
+.page-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.dashboard-card {
+  height: 100%;
+  min-height: 100px;
+}
+
+.dashboard-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--gray-800);
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Notification badge */
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 0.75rem;
+  transform: translateY(-50%);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card-header .icon-circle {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Alerts styling */
+.alert {
+  border: none;
+  border-radius: 0.35rem;
+  background-color: var(--gray-700) !important;
+  color: var(--text-color) !important;
+}
+
+.alert-success {
+  border-left: 4px solid var(--success-color);
+}
+
+.alert-danger {
+  border-left: 4px solid var(--danger-color);
+}
+
+.alert-warning {
+  border-left: 4px solid var(--warning-color);
+}
+
+.alert-info {
+  border-left: 4px solid var(--info-color);
+}
+
+/* Btn-float - remove floating behavior */
+.btn-float {
+  transition: none;
+}
+
+.btn-float:hover {
+  transform: none;
+}
+
+/* Dashboard statistics cards */
+.stat-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.stat-card .card-body {
+  padding: 1.5rem;
+}
+
+.stat-card-primary {
+  background: linear-gradient(135deg, #403aa5 0%, #2c2870 100%);
+  color: white;
+}
+
+.stat-card-success {
+  background: linear-gradient(135deg, #007c56 0%, #005940 100%);
+  color: white;
+}
+
+.stat-card-info {
+  background: linear-gradient(135deg, #319ea5 0%, #1d5c5f 100%);
+  color: white;
+}
+
+.stat-card-warning {
+  background: linear-gradient(135deg, #b58a30 0%, #8a6a1f 100%);
+  color: white;
+}
+
+.stat-card-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.stat-card-label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* List group styling */
+.list-group-item {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.list-group-item-action {
+  color: var(--text-color);
+}
+
+.list-group-item-action:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-color);
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.modal-header {
+  border-bottom-color: var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.modal-footer {
+  border-top-color: var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+/* Fix for checkboxes and radio buttons */
+.form-check-input {
+  background-color: var(--gray-600);
+  border-color: var(--gray-500);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-check-label {
+  color: var(--text-color);
+}
+
+/* Fix dropdown colors */
+.dropdown-menu {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  color: var(--text-color);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+}
+
+.dropdown-divider {
+  border-top-color: var(--border-color);
+}
+
+/* Fix other white elements */
+.bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.bg-light {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+}
+
+.text-dark {
+  color: var(--text-color) !important;
+}
+
+/* Fix for pagination */
+.pagination .page-link {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Main content container */
+main {
+  flex: 1 0 auto;
+}
+
+/* Fix text inputs and selects in various contexts */
+input, select, textarea, .form-select {
+  background-color: var(--gray-700) !important;
+  color: var(--text-color) !important;
+  border-color: var(--gray-600) !important;
+}
+
+/* Ensure modals and other overlays are dark themed */
+.popover, .toast, .tooltip {
+  background-color: var(--bg-card) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Fix code blocks and pre elements */
+code, pre {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* Fix tables */
+.table-responsive {
+  background-color: var(--bg-card);
+}
+
+/* Button close (X) in alerts and modals */
+.btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Fix btn-close-white */
+.btn-close-white {
+  filter: invert(0);
+} 

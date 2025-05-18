@@ -1,0 +1,23 @@
+{
+    "name": "ccs6344/mytasker",
+    "description": "A lightweight PHP/MySQL task management application",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyTasker\\": "src/",
+            "MyTasker\\Config\\": "config/",
+            "MyTasker\\Includes\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CCS6344 Student",
+            "email": "student@example.com"
+        }
+    ],
+    "minimum-stability": "stable"
+} 
