@@ -93,10 +93,6 @@ MyTasker helps you organize your daily tasks with a clean, dark-themed interface
    - Open your browser and navigate to: `http://localhost/taskmaker`
    - Register an account to begin using the application
 
-9. **Default Administrator**:
-   - Username: admin@mytasker.local
-   - Password: Admin@123
-   - Use these credentials to access admin features
 
 ## 🛡️ Security Features
 
